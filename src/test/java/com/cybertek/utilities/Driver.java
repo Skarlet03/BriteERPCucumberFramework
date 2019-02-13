@@ -22,7 +22,7 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
-                    break;
+                  break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));

@@ -18,8 +18,6 @@ public class LoginPage {
     }
 
 
-    @FindBy(css = "a:nth-child(2)")
-    public WebElement briteErpDemoClick;
 
     @FindBy (xpath = "//input[@id='login']")
     public WebElement username;
@@ -30,9 +28,7 @@ public class LoginPage {
     @FindBy (xpath = "//button[@class='btn btn-primary']")
     public WebElement logIn;
 
-     //clicking purchase tab
-    @FindBy (linkText = "Purchases")
-    public WebElement purchase;
+
 
 
     public void loginPOSManager() {
