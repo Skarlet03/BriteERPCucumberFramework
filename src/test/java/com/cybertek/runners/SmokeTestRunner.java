@@ -14,10 +14,7 @@ import org.junit.runner.RunWith;
         glue = "com/cybertek/step_definitions"
         , dryRun = false
         , tags = "@smoke"
-
-
 )
-
 
 public class SmokeTestRunner {
 }

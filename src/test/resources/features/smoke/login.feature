@@ -1,12 +1,12 @@
 @smoke @login
 Feature: Application is up and running, and users can log in
 
-  Scenario: URL is responsive
+  Scenario: Verify the URL is responsive
     When the user goes to URL
     Then the page title should be "Odoo"
     And the page URL should contain "database/selector"
 
-  Scenario Outline: Log in functionality is responsive
+  Scenario Outline: Verify 'Log in' functionality
     Given the user goes to URL
     And the user chooses BriteErpDemo database
     When the "<valid user>" enters valid email
