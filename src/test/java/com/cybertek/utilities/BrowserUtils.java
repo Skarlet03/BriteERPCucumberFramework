@@ -290,11 +290,23 @@ public class BrowserUtils {
      * Explicit Wait for the element's text verification, simplified
      * @param element           WebElement requested to check for the text
      * @param expected          String of the expected text requested
-     * @param seconds           int number of secods to wait
+     * @param seconds           int number of seconds to wait
      * @return                  boolean, that can be used within a conditional statement
      */
     public static boolean isElementsTextAMatch(WebElement element, String expected, int seconds) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), seconds);
         return wait.until(ExpectedConditions.textToBePresentInElement(element, expected));
+    }
+
+    /**
+     * Explicit Wait for the page's title to be a match.
+     *
+     * @param title             String of expected text to be within title
+     * @param seconds           int number of seconds to wait
+     * @return                  boolean, to check the title
+     */
+    public static boolean pageTitleContains(String title, int seconds) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), seconds);
+        return wait.until(ExpectedConditions.titleContains(title));
     }
 }
