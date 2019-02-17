@@ -1,0 +1,41 @@
+Steps that are already defined:
+	If you see this in your feature file you do not need to implement them again NOR do not change the implementation
+
+Navigation Steps
+----------------
+the user goes to URL
+
+Progress Steps
+--------------
+the "put "manager" or "user" here" signs in
+
+
+Assertion Steps
+---------------
+the page title should be "TITLE NAME HERE"
+the page URL should contain "URL HERE"
+
+
+Click Steps
+-----------
+the user chooses BriteErpDemo database
+the user clicks Log in button
+the user clicks Purchases button
+the user clicks on "Requests for Quotation" button on the side bar
+
+Input Steps
+-----------
+the "put "manager" or "user" here" enters valid email
+the "put "manager" or "user" here" enters valid password
+
+Steps that needs to be defined:
+	Before you implement make sure your peer have not written the definision for it yet.
+	We are trying to reuse as many methods as possible to avoid repetition.
+
+
+  Alesya: BRIT-4128
+  		  BRIT-4130
+  Dilorom: BRIT-4132
+  Gulmira BRIT-4137
+  		  BRIT-4141
+  		  BRIT-4142
