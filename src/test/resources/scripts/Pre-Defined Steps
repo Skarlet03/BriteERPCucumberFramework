@@ -1,0 +1,82 @@
+Alesya: BRIT-4128
+           BRIT-4130
+ Dilorom: BRIT-4132
+ Gulmira BRIT-4137
+           BRIT-4141
+           BRIT-4142
+ Rahman BRIT-4151
+          BRIT-4152
+ Mira BRIT-4155
+       BRIT-4156
+
+=======================================
+>>>>STEPS THAT ARE ALREADY DEFINED<<<<:
+=======================================
+>>>>	If you see this in your feature file you do not need to implement them again NOR do not change the implementation
+
+Navigation Steps
+----------------
+the user goes to URL
+
+Progress Steps
+--------------
+the "put "manager" or "user" here" signs in
+
+
+Assertion Steps
+---------------
+the page title should be "TITLE NAME HERE"
+the page URL should contain "URL HERE"
+
+
+Click Steps
+-----------
+the user chooses BriteErpDemo database
+the user clicks Log in button
+the user clicks Purchases button
+the user clicks on "Requests for Quotation" button on the side bar
+
+Input Steps
+-----------
+the "put "manager" or "user" here" enters valid email
+the "put "manager" or "user" here" enters valid password
+
+=========================================
+>>>>STEPS THAT NEEDS TO BE DEFINED<<<<<:
+=========================================
+
+>>>>	Before you implement make sure your peer have not written the definision for it yet.
+>>>>	We are trying to reuse as many methods as possible to avoid repetition.
+
+
+Progress Steps
+--------------
+"window_name_here" window should open
+system File option window should open
+
+Assertion Steps
+---------------
+"header_Name_Here"  header should be displayed
+input box should contain "expected_text_here" text
+header drop options should contain "button_name_here" button
+the page should display "some_messsge_here" messege in the list
+"error_message_here" error popup should be displayed
+main display has a table of Vendor Bills
+"column_name_here" column should have total amount displayed
+"some_messsge_here" button is displayed
+
+Click Steps
+-----------
+user clicks on purchase order by reference number PO00010
+user clicks on "tab_name_here" tab within the form
+user clicks on "button_name_here" button on sub-navigation bar
+user clicks on "tab_name_here" tab within the form
+user clicks on "input_box_name_here" input box
+user clicks on "product_name_here" product
+user clicks on "button_name_here" button
+user clicks on "vendor_name_here" vendor
+user clicks on "contact_name_here" contact
+
+Input Steps
+-----------
+user input messege "some_messsge_here"
