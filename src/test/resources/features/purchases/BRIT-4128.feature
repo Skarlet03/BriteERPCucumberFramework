@@ -1,3 +1,4 @@
+@regression
 Feature: As a POS Manager, I should be able to see and modify the “Purchase Orders” on Purchase order page.
   Background: Steps to land user on the 'Purchase order' page
     Given the "manager" signs in
