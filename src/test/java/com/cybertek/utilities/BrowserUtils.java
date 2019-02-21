@@ -308,5 +308,6 @@ public class BrowserUtils {
     public static boolean pageTitleContains(String title, int seconds) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), seconds);
         return wait.until(ExpectedConditions.titleContains(title));
+        //return wait.until(ExpectedConditions.titleIs(title));
     }
 }

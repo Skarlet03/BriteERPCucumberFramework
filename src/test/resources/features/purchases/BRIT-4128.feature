@@ -1,4 +1,4 @@
-@regression
+@BRIT-4130
 Feature: As a POS Manager, I should be able to see and modify the “Purchase Orders” on Purchase order page.
   Background: Steps to land user on the 'Purchase order' page
     Given the "manager" signs in
@@ -11,11 +11,12 @@ Feature: As a POS Manager, I should be able to see and modify the “Purchase Or
 
 
   Scenario:  Verify that 'Schedule Date' is visible within the functionality
-    When user clicks on purchase order by reference number PO00010
+    When user clicks on purchase order by reference number
     Then "Scheduled Date"  header should be displayed
 
-  Scenario Outline:  Verify that 'Deliveries&Invoices' tab is clickable within the functionality
-    Given user clicks on purchase order by reference number PO00010
+
+  Scenario Outline:  Verify that "<tab_name>" tab is clickable within the functionality
+    Given user clicks on purchase order by reference number
     When user clicks on "<tab_name>" tab within the form
     Then the page URL should contain "purchase.order"
     Examples:
@@ -24,3 +25,4 @@ Feature: As a POS Manager, I should be able to see and modify the “Purchase Or
       |send message|
       |schedule activity|
       |log note|
+
