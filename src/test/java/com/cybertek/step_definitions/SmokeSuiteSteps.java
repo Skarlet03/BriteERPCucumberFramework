@@ -14,7 +14,7 @@ public class SmokeSuiteSteps {
     @When("the user goes to URL")
     public void the_user_goes_to_URL() {
         Driver.getDriver().get(
-                ConfigurationReader.getProperty("url"));
+                ConfigurationReader.getProperty("url2"));
     }
 
     @Then("the page title should be {string}")
@@ -24,15 +24,16 @@ public class SmokeSuiteSteps {
     }
 
     @Then("the page URL should contain {string}")
-    public void the_page_URL_should_contain(String url) {
+    public void the_page_URL_should_contain(String url2) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl()
-                .contains(url));
+                .contains(url2));
     }
 
-    @Given("the user chooses BriteErpDemo database")
-    public void the_user_chooses_BriteErpDemo_database() {
+
+    @Given("the user chooses Sign in")
+    public void the_user_chooses_Sign_in() {
         EntryPage entryPage = new EntryPage();
-        entryPage.brietErpDemoAnchor.click();
+        entryPage.signInBtn.click();
     }
 
     @When("the {string} enters valid email")
@@ -80,9 +81,9 @@ public class SmokeSuiteSteps {
 
     @Given("the {string} signs in")
     public void the_signs_in(String user) {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("url2"));
 
-        new EntryPage().brietErpDemoAnchor.click();
+        new EntryPage().signInBtn.click();
 
         switch (user) {
             case "user":

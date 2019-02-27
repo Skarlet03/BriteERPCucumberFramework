@@ -19,4 +19,8 @@ public class EntryPage {
 
     @FindBy (linkText = "Test")
     public WebElement testAnchor;
+
+    @FindBy (linkText = "Sign in")
+    public WebElement signInBtn;
+
 }
