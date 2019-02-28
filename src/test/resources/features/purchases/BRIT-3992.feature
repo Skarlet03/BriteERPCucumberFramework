@@ -6,7 +6,7 @@ Feature: As a POS Manager, I should be able to 'Create' new 'Request for Quotati
     Given the "user" signs in
     When the user clicks Purchases button
     Then the page title should be "Requests for Quotation - Odoo"
-    And "the Requests for Quotation" header should be displayed
+    And the 'Requests for Quotation' should be displayed on the main panel
 
   Scenario: Verify that 'Create' button is visible on the 'Requests for Quotation' page
     Then the system should display Create button
