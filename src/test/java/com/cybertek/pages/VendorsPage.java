@@ -359,6 +359,22 @@ public class VendorsPage {
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
+    public WebElement getTabButton(String name){
+               return Driver.getDriver().findElement(By.linkText(name));
+    }
+
+
+    @FindBy(xpath = "(//div[@class='btn-group']/div/button)[1]")
+    public WebElement printButton;
+
+    @FindBy(xpath = "(//div[@class='btn-group']/div/button)[2]")
+    public WebElement attachmentsButton;
+
+    @FindBy(xpath = "(//div[@class='btn-group']/div/button)[3]")
+    public WebElement actionButton;
+
+    @FindBy(xpath = "//div[@class='modal-body']")
+    public WebElement deleteWarning;
 
 
 }
