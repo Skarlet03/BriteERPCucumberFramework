@@ -17,5 +17,5 @@ Feature: As a user, I should be able to get contacts and addresses from the vend
     Given user clicks on "China Export" vendor
     When user clicks on "Chao Wang" contact
     Then Contacts page should open
-    And "Open: Contacts"  header should be displayed
+    And Open: Contacts  header should be displayed
     Then "Chao Wang" contact name should be displayed

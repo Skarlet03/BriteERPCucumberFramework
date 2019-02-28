@@ -31,9 +31,9 @@ public class BRIT_4137_steps {
         Assert.assertTrue(vendorsPage.contactsPage.isDisplayed());
     }
 
-    @Then("{string}  header should be displayed")
-    public void header_should_be_displayed(String header) {
-        Assert.assertTrue(vendorsPage.getOpenContactsPage(header).isDisplayed());
+    @Then("Open: Contacts  header should be displayed")
+    public void header_should_be_displayed() {
+        Assert.assertTrue(vendorsPage.getOpenContactsPage("Open: Contacts").isDisplayed());
     }
 
     @Then("{string} contact name should be displayed")
