@@ -1,4 +1,4 @@
-#@mira
+@BRIT-4155 @McLean @Purchases @regression
 Feature: As a POS Manager, I should be able to see Vendor's details
 
   Background: Steps to land user on the 'Vendor Bills' page

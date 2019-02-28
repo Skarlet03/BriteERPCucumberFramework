@@ -1,4 +1,4 @@
-@mira
+@BRIT-4156 @McLean @Purchases @regression
 Feature: As a POS Manager, I should be able to perform actions on Vendor's details page
   Background: Steps to land user on the 'Purchase order' page
     Given the "user" signs in
