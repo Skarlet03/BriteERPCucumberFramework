@@ -35,6 +35,18 @@ public class RequestsForQuotation {
     @FindBy(css=".o_dropdown")
     private List<WebElement> btns;
 
+    @FindBy (tagName = "table")
+    public WebElement requestForQuotationTable;
+
+    @FindBy (tagName = "th")
+    public List<WebElement> requestsForQuotationTableHeaders;
+
+    @FindBy (css = "td[title='Total Untaxed amount']")
+    public WebElement totalUntaxedAmountLabel;
+
+    @FindBy (css = "td[title='Total amount']")
+    public WebElement totalTaxedAmountLabel;
+
     public WebElement getFilters(){
         return btns.get(2);
     }

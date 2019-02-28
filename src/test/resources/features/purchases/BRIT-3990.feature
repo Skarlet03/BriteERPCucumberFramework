@@ -20,7 +20,7 @@ Feature: As a POS Manager, I should be able to see all 'Requests for Quotation'
   Scenario Outline: Verify that 'Purchases' tab is visible and clickable
   from the top navigation tab
     Given the user goes to URL
-    And the user chooses BriteErpDemo database
+    And the user chooses Sign in
     And the "<user>" enters valid email
     And the "<user>" enters valid password
     And the user clicks Log in button
@@ -33,7 +33,7 @@ Feature: As a POS Manager, I should be able to see all 'Requests for Quotation'
       |user   |
       |manager|
 
-  Scenario: Verify that 'Requests for Quotation' is availabLe and clickable on the left navigation bar
+  Scenario: Verify that 'Requests for Quotation' is available and clickable on the left navigation bar
     Given the "user" signs in
     When the user clicks Purchases button
     Then the page title should be "Requests for Quotation - Odoo"
@@ -46,7 +46,7 @@ Feature: As a POS Manager, I should be able to see all 'Requests for Quotation'
     And the user clicks Purchases button
     Then the page title should be "Requests for Quotation - Odoo"
     And the Requests for Quotation table is displayed
-    And tge Requests for Quotation table has the following "headings"
+    And the Requests for Quotation table has the following "headings"
       | Reference       |
       | Order Date      |
       | Vendor          |
@@ -61,6 +61,4 @@ Feature: As a POS Manager, I should be able to see all 'Requests for Quotation'
     And the user clicks Purchases button
     And the page title should be "Requests for Quotation - Odoo"
     And the Requests for Quotation table is displayed
-    Then the Requests for Quotation table has the following "total amounts" displayed
-      | Untaxed |
-      | Taxed   |
+    Then the Requests for Quotation table has the following total amount and total taxed amount displayed
