@@ -1,7 +1,4 @@
 package com.cybertek.runners;
-
-
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -14,7 +11,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com.cybertek/step_definitions"
         ,dryRun = false
-        ,tags = "@regression"
+        ,tags = "@BRIT-4130"
 )
-public class CukesRunner {
+
+public class CukesRunner_Alesia {
 }

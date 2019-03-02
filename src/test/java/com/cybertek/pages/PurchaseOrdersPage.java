@@ -37,7 +37,7 @@ public class PurchaseOrdersPage {
 //        String xpath ="(//*[.='" + refNumber + "']";
 //        return Driver.getDriver().findElement(By.xpath(xpath));
 //    } doesnt work
-@FindBy (xpath = "//div[@class='table-responsive']/table/tbody/tr[10]/td[2]")
+@FindBy (xpath = "//div[@class='table-responsive']/table/tbody/tr[22]/td[2]")
 public WebElement refNumber;
 
     @FindBy(linkText ="Deliveries & Invoices")

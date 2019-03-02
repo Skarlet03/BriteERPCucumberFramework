@@ -52,13 +52,12 @@ public class VendorsPage {
 
 
 
-    //OPENING URL METHOD:
+//OPENING URL METHOD:
     public void openUrl(){
         Driver.getDriver().get("http://52.39.162.23/");
     }
 
-
-    //SIGNING IN METHOD:
+//SIGNING IN METHOD:
     public void signIn() {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 100);
         signIn.click();
@@ -68,7 +67,7 @@ public class VendorsPage {
         briteErpDemoDropDownBtn.click();
     }
 
-    //LOGGING IN METHOD:
+//LOGGING IN METHOD:
     public void login(String usernameText, String passwordText){
         this.username.sendKeys(usernameText);
         this.password.sendKeys(passwordText);
@@ -77,19 +76,17 @@ public class VendorsPage {
 
 
 
-    //COMMON LOCATORS:
+//COMMON LOCATORS:
 
     public WebElement getModuleDefaultPageHeader(String modulePageHeader){
         String xpath = "//li[contains(text(),'" + modulePageHeader + "']";
         return Driver.getDriver().findElement(By.xpath(xpath));
-
     }
 
     public WebElement getModuleDefaultPageFilterText(String defaultFilterText){
         String xpath = "//span[contains(text(), '" + defaultFilterText + "')]";
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
-
 
     @FindBy (xpath = "//span[@class='fa fa-filter o_searchview_facet_label']")
     public WebElement moduleDefaultPageFilterButton;
@@ -99,31 +96,101 @@ public class VendorsPage {
     public WebElement moduleDefaultPageSearchInputBox;
 
 
-    public WebElement getVendorPageTopBtn(String buttonName){
-        String xpath = "(//button[contains(text(),'" + buttonName + "')])[1]";
+
+//CUCUMBER PROJECT: BRIT_4137
+
+    public WebElement getContactsName(String contactName){
+        String xpath = "//span[contains(text(), '" + contactName + "')]";
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
+
+    @FindBy(css = ".modal-content")
+    public WebElement contactsPage;
+
+    public WebElement getOpenContactsPage(String openContactPage){
+        String xpath = "//h4[contains(text(), '" + openContactPage + "')]";
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
+
+    public WebElement getContactsNameOnContactsPage(String name) {
+        String xpath = "//tbody//span[contains(text(), '" + name + "')]";
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
+
+
+//CUCUMBER PROJECT: BRIT_4141
+
+    public WebElement getTopNavBtn(String buttonName){
+        String xpath = "//div//button[contains(text(),'" + buttonName + "')]";
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
+
+    public WebElement getTopNavDropdownBtn(String dropdownBtn){
+        String xpath = "//a[contains(text(), '" + dropdownBtn + "')]";
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
+
+    @FindBy(linkText = "Due Payments")
+    public WebElement duePaymentsDropdownBtn;
+
+    @FindBy(xpath = "//form[@class='o_form_binary_form']")
+    public WebElement addDropdownBtn;
+
+    @FindBy(linkText = "Duplicate")
+    public WebElement duplicateDropdownBtn;
+
+
+
+//CUCUMBER PROJECT: BRIT_4142
+
+    @FindBy(xpath = "//div[@class='o_chatter_topbar']/button[1]")
+    public WebElement sendMessageBtn;
+
+    @FindBy(xpath = "//textarea[@class='o_input o_composer_text_field']")
+    public WebElement messageBox;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-primary o_composer_button_send hidden-xs']")
+    public WebElement sendBtn;
+
+    ///
+    @FindBy(xpath = "//div[@class='o_chatter_topbar']/button[2]")
+    public WebElement logNoteBtn;
+
+    @FindBy(xpath = "//textarea[@class='o_input o_composer_text_field']")
+    public WebElement logBox;
+
+    @FindBy(xpath = "//button[@class='btn btn-sm btn-primary o_composer_button_send hidden-xs']")
+    public WebElement logBtn;
+
+    ///
+    @FindBy(xpath = "//div[@class='o_chatter_topbar']/button[3]")
+    public WebElement scheduleActivityBtn;
+
+    @FindBy(xpath = "//h4[contains(text(), 'Odoo')]")
+    public WebElement scheduleActivityPage;
+
+    @FindBy(xpath = "//input[@id='o_field_input_2077']")
+    public WebElement activityInputBox;
+
+    public WebElement getSentMessage(String message){
+        String xpath = "//p[contains(text(), '" + message + "')]";
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
+
+
 
 
     //USER PERSPECTIVE TEST CASES:
 
+    @FindBy(xpath = "//div[@class='oe_kanban_details']/span[contains(text(), 'Chao Wang')]")
+    public WebElement vendorContactName;
 
-    public WebElement getVendorPageTopDropdownBtn(String buttonName){
-        String xpath = "//button[contains(text(),'" + buttonName + "')]";
-        return Driver.getDriver().findElement(By.xpath(xpath));
-    }
-
-    @FindBy(xpath = "//a[contains(text(), 'Due Payments')]")
-    public WebElement duePaymentsDropdownMenuBtn;
-
-    @FindBy(xpath = "//li[contains(text(), 'Due Payments')]")
-    public WebElement duePaymentsPage;
+    @FindBy(css = ".modal-title")
+    public WebElement contactsWindowHeader;
 
     @FindBy (xpath = "//div[@class='o_notification_manager']")
     public WebElement unableToPrintReportPage;
 
-    @FindBy(xpath = "//form[@class='o_form_binary_form']")
-    public WebElement addDropdownMenuBtn;
 
     public WebElement getAttachedFile(String fileName){
         String xpath = "//a[contains(text(), ' " + fileName + "')]";
@@ -134,7 +201,6 @@ public class VendorsPage {
         String xpath = "//a[contains(text(), '" + dropdownMenuElement + "')]";
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
-
 
 
     public WebElement getCurrentVendorCompanyName(String companyName){
@@ -151,63 +217,18 @@ public class VendorsPage {
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
-    @FindBy(xpath = "//div[@class='o_chatter_topbar']/button[1]")
-    public WebElement sendMessageBtn;
-
-    @FindBy(xpath = "//textarea[@class='o_input o_composer_text_field']")
-    public WebElement messageBox;
-
-    @FindBy(xpath = "//button[@class='btn btn-sm btn-primary o_composer_button_send hidden-xs']")
-    public WebElement sendBtn;
-
-    public WebElement getSentMessage(String message){
-        String xpath = "//p[contains(text(), '" + message + "')]";
-        return Driver.getDriver().findElement(By.xpath(xpath));
-    }
-
-    @FindBy(xpath = "//h4[contains(text(), 'Odoo')]")
-    public WebElement scheduleActivityPage;
-
-    @FindBy(xpath = "//input[@id='o_field_input_2077']")
-    public WebElement activityInputBox;
-
-    @FindBy(xpath = "//div[@class='o_chatter_topbar']/button[2]")
-    public WebElement logNoteBtn;
-
-    @FindBy(xpath = "//textarea[@class='o_input o_composer_text_field']")
-    public WebElement logBox;
-
-    @FindBy(xpath = "//button[@class='btn btn-sm btn-primary o_composer_button_send hidden-xs']")
-    public WebElement logBtn;
-
-    @FindBy(xpath = "//div[@class='o_chatter_topbar']/button[3]")
-    public WebElement scheduleActivityBtn;
-
-
     public WebElement getCurrentVendorEmailsOrWebsites(String emailOrWebsite){
         String xpath = "//a[contains(text(), '" + emailOrWebsite + "')]";
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
-    public WebElement getCurrentVendorNavTabs(String formNavTagName){
+    public WebElement getCurrentVendorNavTabs(String formNavTagName) {
         String xpath = "//a[contains(text(), '" + formNavTagName + "')]";
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
-    public WebElement getContactName(String contactName){
-        String xpath = "//span[contains(text(), '" + contactName + "')]";
-        return Driver.getDriver().findElement(By.xpath(xpath));
-    }
 
-    public WebElement getOpenContactsPage(String openContactPage){
-        String xpath = "//h4[contains(text(), '" + openContactPage + "')]";
-        return Driver.getDriver().findElement(By.xpath(xpath));
-    }
-
-
-
-
-    //MANAGER PERSPECTIVE TEST CASES:
+//MANAGER PERSPECTIVE TEST CASES:
 
     public WebElement getVendorFormRadioBtn(String RadioBtnName) {
         String xpath = "//label[contains(text(), '" + RadioBtnName + "')]";
@@ -338,6 +359,22 @@ public class VendorsPage {
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
+    public WebElement getTabButton(String name){
+               return Driver.getDriver().findElement(By.linkText(name));
+    }
+
+
+    @FindBy(xpath = "(//div[@class='btn-group']/div/button)[1]")
+    public WebElement printButton;
+
+    @FindBy(xpath = "(//div[@class='btn-group']/div/button)[2]")
+    public WebElement attachmentsButton;
+
+    @FindBy(xpath = "(//div[@class='btn-group']/div/button)[3]")
+    public WebElement actionButton;
+
+    @FindBy(xpath = "//div[@class='modal-body']")
+    public WebElement deleteWarning;
 
 
 }
