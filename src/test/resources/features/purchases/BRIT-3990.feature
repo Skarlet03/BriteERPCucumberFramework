@@ -32,7 +32,7 @@ Feature: As a POS Manager, I should be able to see all 'Requests for Quotation'
       |user   |
       |user   |
       |manager|
-
+	@TRIAL-1
   Scenario: Verify that 'Requests for Quotation' is available and clickable on the left navigation bar
     Given the "user" signs in
     When the user clicks Purchases button
